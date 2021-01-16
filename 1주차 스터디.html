@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Only HTML</title>
+    <style>
+        *[tooltip]:after {
+            content: attr(tooltip);
+            opacity: 0;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            background-color: rgb(0, 0, 0);
+            border-radius: 0.4rem;
+            color: #fff;
+            position: absolute;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+            padding: 0.7rem;
+            margin-left: 1rem;
+        }
+
+        *[tooltip]:hover:after {
+            opacity: 1;
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>안녕하세요😉 제 이름은 <b>이창훈</b>입니다.</div>
+    <div>
+        <a href="https://skb.skku.edu/english/index.do">성균관대학교 영어영문학과</a
+      >, <a href="https://cs.skku.edu/college/department/sie_intro">융합소프트웨어학과</a>
+      19학번으로 재학중입니다.
+    </div>
+    <table border="1">
+      <tr tooltip="table">
+        <th>질문</th>
+        <th>답변</th>
+      </tr>
+      <tr tooltip="img">
+        <td>자주 쓰는 이모티콘은?</td>
+        <td>
+          <img
+            height="150px"
+            src="memoji.jpg"
+            alt=""
+          />
+        </td>
+      </tr>
+      <tr tooltip="ol, ul">
+        <td>베라 3픽은?</td>
+        <td>
+          <ol>
+            <li>아빠는 딸바봉</li>
+            <li>엄마는외계인</li>
+            <li>아몬드봉봉</li>
+          </ol>
+        </td>
+      </tr>
+      <tr tooltip="mark">
+        <td>좌우명은?</td>
+        <td>
+          <mark>지금 할 수 있는 것은 지금 하자</mark>
+        </td>
+      </tr>
+      <tr tooltip="radio input">
+        <td>MBTI는?</td>
+        <td>
+          <div>
+            <input type="radio" name="openness" checked="checked"/>E
+            <input type="radio" name="openness" />I
+          </div>
+          <div>
+            <input type="radio" name="cognission" />N
+            <input type="radio" name="cognission" checked="checked"/>S
+          </div>
+          <div>
+            <input type="radio" name="judgement" />T
+            <input type="radio" name="judgement" checked="checked"/>F
+          </div>
+          <div>
+            <input type="radio" name="living" />P
+            <input type="radio" name="living" checked="checked"/>J
+          </div>
+        </td>
+      </tr>
+      <tr tooltip="a href">
+        <td>Github 주소는?</td>
+        <td><a href="https://github.com/soondubu5616/soondubu5616.github.io">여기!</a></td>
+        </tr>
+        <tr tooltip="checkbox input">
+            <td>2021년 이루고 싶은 것은?</td>
+            <td>
+                <input type="checkbox" name="wishlist" id="" checked="checked"/>저축
+                <input type="checkbox" name="wishlist" id="" checked="checked"/>여행
+                <input type="checkbox" name="wishlist" id="" checked="checked"/>코딩 정복
+                <input type="checkbox" name="wishlist" id="" checked="checked"/>효도
+            </td>
+        </tr>
+        </table>
